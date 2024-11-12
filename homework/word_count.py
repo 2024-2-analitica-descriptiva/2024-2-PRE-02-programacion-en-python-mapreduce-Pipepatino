@@ -372,6 +372,9 @@ def run_job(input_directory, output_directory):
         # El flujo de trabajo se ejecuta y guarda el resultado en 'output_data'.
     """
     
+    # Asegúrate de que el directorio de salida existe
+    create_output_directory(output_directory)
+
     # Cargar los archivos desde el directorio de entrada
     files = load_input(input_directory)
     
@@ -392,6 +395,7 @@ def run_job(input_directory, output_directory):
     
     # Crear el archivo '_SUCCESS' para marcar el éxito del trabajo
     create_marker(output_directory)
+
     
     # Mostrar el resultado del trabajo (opcional, puede ser útil para depuración)
     from pprint import pprint
