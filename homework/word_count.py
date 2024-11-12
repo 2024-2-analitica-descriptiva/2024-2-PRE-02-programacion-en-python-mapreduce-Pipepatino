@@ -10,6 +10,7 @@ import string
 import os
 import shutil
 
+# Prueba
 
 #
 # Escriba la función load_input que recive como parámetro un folder y retorna
